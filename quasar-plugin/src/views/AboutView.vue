@@ -1,6 +1,9 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <q-card class="my-card">
+      <q-card-section> Hello, I am a Quasar Card. </q-card-section>
+    </q-card>
   </div>
 </template>
 
