@@ -1,4 +1,4 @@
-# Steps
+# ⛰️ Steps
 
 1. Scaffold all 3 projects (1 is stretch)
 2. Add the libraries to each project (validate the runs)
@@ -12,7 +12,7 @@
 - Consistency with documentation, helpful?
 - Learning curve, adaptability, velocity
 
-# Quasar
+# ⚙️ I. Quasar
 
 ## 3 OPTIONS: Quasar CLI, Vite plugin, & Vue CLI Plugin
 
@@ -32,8 +32,12 @@ For installing Vue devtools you have to create a boot/devtools.js file, and upda
 
 Quasar Vite-Plugin flavor was easier to set up, but you lose essentially everything Quasar really offers.
 
-# PrimeVue
+# 🏎️ II. PrimeVue + Tailwind
 
 Immediately noticeable how much better/clearer the documentation is than Quasar.
 
 Easy to setup, install TailwindCSS and quickly configure the Vue app.
+
+# 🏁 III. Radix + Tailwind
+
+TODO: Stretch goal.

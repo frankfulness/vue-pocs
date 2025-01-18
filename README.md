@@ -1,16 +1,20 @@
-# vue-pocs
+# 🕵️ Vue Proof of Concepts
+
+[![Tools](https://skillicons.dev/icons?i=js,vite,vue,tailwind)](https://skillicons.dev)
 
 Three Vue projects to compare alternative 2025 component libraries.
 
-## Proof of concepts
+## 🧰 Proof of concepts
 
-I. PrimeVue + Tailwind
-II. Quasar
-III. Shadcn + Radix + Tailwind (Stretch goal)
+**I. PrimeVue + Tailwind**
 
-## Requirements & Considerations
+**II. Quasar (CLI vs. Vue-Plugin)**
 
-- 508 compliance & accessible.
-- Testing Vitest TDD unit/snapshot Testing
-- Responsivity
-- Themes - Dark / Light
+**III. Radix + Tailwind (Stretch goal)**
+
+## 📐 Requirements & Considerations
+
+- _508 compliance & accessible._
+- _Testing Vitest TDD unit/snapshot Testing_
+- _Responsivity_
+- _Themes - Dark / Light_
