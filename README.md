@@ -4,6 +4,8 @@
 
 Three Vue projects to compare alternative 2025 component libraries.
 
+## [🔩 POC BREAKDOWN](./POC-Breakdown.md)
+
 ## 🧰 Proof of concepts
 
 **I. PrimeVue + Tailwind**
