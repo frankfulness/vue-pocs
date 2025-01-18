@@ -30,4 +30,8 @@ Essentially, CLI means project regenerate/rewrite. Vite Plugin means lower quali
 The documentation completely lacked in explaining plugin installation. For example:
 For installing Vue devtools you have to create a boot/devtools.js file, and update the quasar.config.js file in 4 locations (boot, vitePlugins, framework, & build) after installing the dependency. And though we input everything that we should, we still could not get them in. No documentation provided from Quasar outside Electron. This means, due to inability to install browser extensions, we get NO Vue devtools with this CLI setup.
 
+Quasar Vite-Plugin flavor was easier to set up, but you lose essentially everything Quasar really offers.
+
 # PrimeVue
+
+Immediately noticeable how much better/clearer the documentation is than Quasar.
