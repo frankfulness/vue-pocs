@@ -35,3 +35,5 @@ Quasar Vite-Plugin flavor was easier to set up, but you lose essentially everyth
 # PrimeVue
 
 Immediately noticeable how much better/clearer the documentation is than Quasar.
+
+Easy to setup, install TailwindCSS and quickly configure the Vue app.
