@@ -12,6 +12,18 @@
 - Consistency with documentation, helpful?
 - Learning curve, adaptability, velocity
 
+Components to use:
+
+1. Tabs
+2. Buttons
+3. Form with input
+4. Props
+5. Events
+6. Unit test
+7. 508 compliance
+8. Smaller screen site (consideration)
+9. Dark mode / themeing
+
 # ⚙️ I. Quasar
 
 ## 3 OPTIONS: Quasar CLI, Vite plugin, & Vue CLI Plugin
@@ -40,4 +52,13 @@ Easy to setup, install TailwindCSS and quickly configure the Vue app.
 
 # 🏁 III. Radix + Tailwind
 
-TODO: Stretch goal.
+1. Installation very smooth, easy to jump right into adding components. Component features in documentation specify it's compliance to accessibility.
+
+- Keyboard navigation and Focus management documentation holds up in accessibility: <https://www.radix-vue.com/overview/accessibility.html>
+
+2. TailwindCSS configuration is straight forward. Every component has a link to stackblitz example utilized as well as the tailwindcss config for css transitions, etc.
+3. TypeScript is opt in, but only for intellisense for usage of Radix components, simply omit lang='ts' from the `<script>` of a component, easy to add ts later.
+4. Testing/TDD, straight forward to work with vitest, wrote a `AccessibilityPlayground.spec.js` test to hit basics of every single component brought in.
+5. TODO: 508 compliance, add a accessibility specific unit test
+6. TODO: Responsivity implement
+7. TODO: Dark/Light theme
