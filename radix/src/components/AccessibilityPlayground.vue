@@ -3,7 +3,7 @@
   /* <script setup lang='ts'> */
 }
 import { Icon } from '@iconify/vue'
-import { ref } from 'vue'
+import { ref, h } from 'vue'
 import {
   // TABS
   TabsContent,
@@ -47,6 +47,53 @@ import {
   ToastAction,
   ToastViewport,
 } from 'radix-vue'
+
+import DataTable from '@/components/DataTable.vue'
+import people from '@/components/mockDataPeople.json'
+import EditButton from '@/components/EditButton.vue'
+import { format } from 'date-fns'
+const columnsPeople = [
+  {
+    accessorKey: 'id',
+    header: 'ID',
+    enableSorting: false,
+  },
+  {
+    accessorKey: 'first_name',
+    header: 'First name',
+  },
+  {
+    accessorKey: 'last_name',
+    header: 'Last name',
+  },
+  // {
+  //   accessorFn: row => `${row.first_name} ${row.last_name}`,
+  //   header: 'Name',
+  // },
+  {
+    accessorKey: 'email',
+    header: 'Email',
+  },
+  {
+    accessorKey: 'title',
+    header: 'Title',
+  },
+  {
+    accessorKey: 'role',
+    header: 'Role',
+  },
+  {
+    accessorKey: 'created_at',
+    header: 'Created',
+    cell: (info) => format(new Date(info.getValue()), 'MMM d, yyyy'),
+  },
+  {
+    accessorKey: 'edit',
+    header: ' ',
+    cell: ({ row }) => h(EditButton, { id: row.original.id }),
+    enableSorting: false,
+  },
+]
 
 const toggleState = ref(false)
 const checkboxOne = ref(false)
@@ -599,4 +646,8 @@ function handleToastClick() {
       class="[--viewport-padding:_25px] fixed bottom-0 right-0 flex flex-col p-[var(--viewport-padding)] gap-[10px] w-[390px] max-w-[100vw] m-0 list-none z-[2147483647] outline-none"
     />
   </ToastProvider>
+
+  <!-- <div class="container mx-auto px-8 py-8"> -->
+  <DataTable :data="people" :columns="columnsPeople" />
+  <!-- </div> -->
 </template>

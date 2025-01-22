@@ -62,3 +62,4 @@ Easy to setup, install TailwindCSS and quickly configure the Vue app.
 5. TODO: 508 compliance, add a accessibility specific unit test
 6. TODO: Responsivity implement
 7. TODO: Dark/Light theme
+8. Radix doesn't have a Data Table component out the box because it acknowledges that there are better table solutions out there, like AG Grid or the underlying TanStack Table v8 (used under the hood of AG Grid). Thus, I did implement a fairly simply tailwind styled TanStack Table in vue showing only a couple of the customizeable tables we can make for free <https://tanstack.com/table/latest/docs/framework/vue/examples/row-selection>
