@@ -1,7 +1,7 @@
 # ⛰️ Steps
 
-1. Scaffold all 3 projects (1 is stretch)
-2. Add the libraries to each project (validate the runs)
+1. Scaffold all 3 projects (1 was stretch, we got 4 total)
+2. Add the libraries to each project (validate running of apps)
 3. Figure out what is a great Accessibilty Paradigm for Ui to determine what components to use in all 3.
 4. Identify from the pros and cons of each, how the project can test all of them in same project.
 5. Hit a few cons from the research we have done.
@@ -19,10 +19,10 @@ Components to use:
 3. Form with input
 4. Props
 5. Events
-6. Unit test
-7. 508 compliance
+6. Unit test with vitest
+7. 508 compliance Axe locally until e2e
 8. Smaller screen site (consideration)
-9. Dark mode / themeing
+9. Dark mode / themes / style considerations for overrides or customizations to match design specs
 
 # ⚙️ I. Quasar
 
@@ -55,9 +55,14 @@ Quasar Vite-Plugin flavor was easier to set up, but you lose essentially everyth
 
 # 🏎️ II. PrimeVue + Tailwind
 
-Immediately noticeable how much better/clearer the documentation is than Quasar.
-
-Easy to setup, install TailwindCSS and quickly configure the Vue app.
+1. Immediately noticeable how much better/clearer the documentation is than Quasar.
+2. Easy to setup, install TailwindCSS and quickly configure the Vue app.
+3.
+4.
+5.
+6.
+7.
+8.
 
 # 🏁 III. Radix + Tailwind
 
@@ -107,4 +112,6 @@ Running tests, tailwindcss, application, and poc breakdown in neovim
 9. Nuxt with Tailwind Quick & Easy Setup <https://nuxt.com/modules/tailwindcss>
 ![Screenshot 2025-01-22 at 8 56 27 AM](https://github.com/user-attachments/assets/cf28d51a-fcd8-4500-a70e-5c5feeb3d11b)
 
--
+# 📏 508 Compliance - Axe DevTools
+
+Initial look:-
