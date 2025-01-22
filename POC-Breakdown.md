@@ -68,6 +68,9 @@ https://github.com/user-attachments/assets/f6cdd50f-96a2-4c93-9dc5-5fb5d52e3f19
 8. Radix doesn't have a Data Table component out the box because it acknowledges that there are better table solutions out there, like AG Grid or the underlying TanStack Table v8 (used under the hood of AG Grid). Thus, I did implement a fairly simply tailwind styled TanStack Table in vue showing only a couple of the customizeable tables we can make for free <https://tanstack.com/table/latest/docs/framework/vue/examples/row-selection>
 
 
+Running tests, tailwindcss, application, and poc breakdown in neovim
+![Screenshot 2025-01-21 at 4 52 16 PM](https://github.com/user-attachments/assets/21438ff8-19a4-44ba-a5cf-959c3d5c5446)
+
 
 **Alternative considerations for tables is an entirely larger discussion outside of component libraries:**
 - Kendo UI (Cost) https://www.telerik.com/kendo-vue-ui/components/grid/
