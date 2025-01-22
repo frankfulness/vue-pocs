@@ -54,152 +54,42 @@
           />
         </template>
       </UInputMenu>
-      <UButton label="Reveal modal" @click="openModal" />
+      <div>
+        <UButton label="Modal Yup Form" @click="isOpen = true" />
+
+        <UModal v-model="isOpen">
+          <div class="p-4">
+            <UForm
+              :schema="schema"
+              :state="state"
+              class="space-y-4"
+              @submit="onSubmit"
+            >
+              <UFormGroup label="Email" name="email">
+                <UInput v-model="state.email" />
+              </UFormGroup>
+
+              <UFormGroup label="Password" name="password">
+                <UInput v-model="state.password" type="password" />
+              </UFormGroup>
+
+              <UButton type="submit"> Submit </UButton>
+            </UForm>
+          </div>
+        </UModal>
+      </div>
     </UCard>
 
-    <UTable v-model="selectedPerson" :rows="tablePeople" :columns="columns">
-      <template #name-data="{ row }">
-        <span
-          :class="[
-            selectedPerson.find((person) => person.id === row.id) &&
-              'text-primary-500 dark:text-primary-400',
-          ]"
-          >{{ row.name }}</span
-        >
-      </template>
-
-      <template #actions-data="{ row }">
-        <UDropdown :items="tableItems(row)">
-          <UButton
-            color="gray"
-            variant="ghost"
-            icon="i-heroicons-ellipsis-horizontal-20-solid"
-          />
-        </UDropdown>
-      </template>
-    </UTable>
+    <TableExampleAdvanced />
   </UContainer>
 </template>
 
 <script setup>
+import { defineAsyncComponent, ref, reactive } from "vue";
 import { object, string } from "yup";
-import ModalExampleComponent from "./components/ModalExampleComponent";
+import TableExampleAdvanced from "./components/TableExampleAdvanced";
 
-const toast = useToast();
-const modal = useModal();
-const count = ref(0);
-
-function openModal() {
-  count.value += 1;
-  modal.open(ModalExampleComponent, {
-    count: count.value,
-    onSuccess() {
-      toast.add({
-        title: "Success !",
-        id: "modal-success",
-      });
-    },
-  });
-}
-
-const columns = [
-  {
-    key: "name",
-    label: "Name",
-  },
-  {
-    key: "title",
-    label: "Title",
-  },
-  {
-    key: "email",
-    label: "Email",
-  },
-  {
-    key: "role",
-    label: "Role",
-  },
-  {
-    key: "actions",
-  },
-];
-
-const tablePeople = [
-  {
-    id: 1,
-    name: "Lindsay Walton",
-    title: "Front-end Developer",
-    email: "lindsay.walton@example.com",
-    role: "Member",
-  },
-  {
-    id: 2,
-    name: "Courtney Henry",
-    title: "Designer",
-    email: "courtney.henry@example.com",
-    role: "Admin",
-  },
-  {
-    id: 3,
-    name: "Tom Cook",
-    title: "Director of Product",
-    email: "tom.cook@example.com",
-    role: "Member",
-  },
-  {
-    id: 4,
-    name: "Whitney Francis",
-    title: "Copywriter",
-    email: "whitney.francis@example.com",
-    role: "Admin",
-  },
-  {
-    id: 5,
-    name: "Leonard Krasner",
-    title: "Senior Designer",
-    email: "leonard.krasner@example.com",
-    role: "Owner",
-  },
-  {
-    id: 6,
-    name: "Floyd Miles",
-    title: "Principal Designer",
-    email: "floyd.miles@example.com",
-    role: "Member",
-  },
-];
-
-const tableItems = (row) => [
-  [
-    {
-      label: "Edit",
-      icon: "i-heroicons-pencil-square-20-solid",
-      click: () => console.log("Edit", row.id),
-    },
-    {
-      label: "Duplicate",
-      icon: "i-heroicons-document-duplicate-20-solid",
-    },
-  ],
-  [
-    {
-      label: "Archive",
-      icon: "i-heroicons-archive-box-20-solid",
-    },
-    {
-      label: "Move",
-      icon: "i-heroicons-arrow-right-circle-20-solid",
-    },
-  ],
-  [
-    {
-      label: "Delete",
-      icon: "i-heroicons-trash-20-solid",
-    },
-  ],
-];
-
-const selectedPerson = ref([tablePeople[1]]);
+const isOpen = ref(false);
 
 const schema = object({
   email: string().email("Invalid email").required("Required"),

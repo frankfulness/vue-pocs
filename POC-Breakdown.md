@@ -63,10 +63,10 @@ Video example of Accessibility stress test:
 2. TailwindCSS configuration is straight forward. Every component has a link to stackblitz example utilized as well as the tailwindcss config for css transitions, etc.
 3. TypeScript is opt in, but only for intellisense for usage of Radix components, simply omit lang='ts' from the `<script>` of a component, easy to add ts later.
 4. Testing/TDD, straight forward to work with vitest, wrote a `AccessibilityPlayground.spec.js` test to hit basics of every single component brought in.
-5. TODO: 508 compliance, add a accessibility specific unit test
-6. TODO: Responsivity implement
-7. TODO: Dark/Light theme
-8. Radix doesn't have a Data Table component out the box because it acknowledges that there are better table solutions out there, like AG Grid or the underlying TanStack Table v8 (used under the hood of AG Grid). Thus, I did implement a fairly simply tailwind styled TanStack Table in vue showing only a couple of the customizeable tables we can make for free <https://tanstack.com/table/latest/docs/framework/vue/examples/row-selection>
+5. 508 compliance, checked full scan from Axe DevTools
+6. Dark/Light theme
+7. Responsivity implementation exists baked in, didn't input time for layout.
+8. **POTENTIAL BLOCKER Radix** doesn't have a Data Table component out the box because it acknowledges that there are better table solutions out there, like AG Grid or the underlying TanStack Table v8 (used under the hood of AG Grid). Thus, I did implement a fairly simply tailwind styled TanStack Table in vue showing only a couple of the customizeable tables we can make for free <https://tanstack.com/table/latest/docs/framework/vue/examples/row-selection>
 
 Running tests, tailwindcss, application, and poc breakdown in neovim
 ![Screenshot 2025-01-21 at 4 52 16 PM](https://github.com/user-attachments/assets/21438ff8-19a4-44ba-a5cf-959c3d5c5446)
@@ -85,16 +85,17 @@ Running tests, tailwindcss, application, and poc breakdown in neovim
 - Tanstack Table for vue <https://github.com/drehimself/tanstack-table-vue-example/tree/main> & <https://www.youtube.com/watch?v=qaXYtT_WJBw>
 - Codesandbox samples for Vue <https://codesandbox.io/search?refinementList%5Btemplate%5D=&refinementList%5Bnpm_dependencies.dependency%5D%5B0%5D=%40tanstack%2Fvue-table&page=1&configure%5BhitsPerPage%5D=12>
 
-# 🪴 IV. Nuxt with Nuxt UI
+# 🪴 IV. Nuxt with Nuxt UI + TailwindCSS
 
-- Quick to generate a Nuxt application. Configuration documentation is straight forward. <https://nuxt.com/docs/getting-started/configuration>
-- It appears Nuxt UI has a decent free version and appears to be the go to for the component library choice for Nuxt. However, there is a Pro/Premium component version of this. <https://ui.nuxt.com/pro/pricing> fortunately it's a one time cost for life for 5 developers, there also appears to be a Figma Kit Pro for the 1500+ component & variants which has Tailwind CSS assets and icons included.
-- Can do without TypeScript easily, and for form validation Yup > Zod if no TS.
-- Has Table component and implemented it.
-
+1. Quick to generate a Nuxt application. Configuration documentation is straight forward. <https://nuxt.com/docs/getting-started/configuration>
+2. TypeScript opt out or in no problem, for form validation Yup > Zod if no TS.
+3. Component Library: It appears Nuxt UI has a decent free version and appears to be the go to for the component library choice for Nuxt. However, there is a Pro/Premium component version of this. <https://ui.nuxt.com/pro/pricing> fortunately it's a one time cost for life for 5 developers, there also appears to be a Figma Kit Pro for the 1500+ component & variants which has Tailwind CSS assets and icons included.
+4. TODO: Didn't implement Vitest yet
+5. 508 Axe DevTools initially had more flagged issues, but this is simply because you have to manually add aria labels properly, it's not a problem, just needs to be done correctly. Potentially section in MR's and e2e test for 508 itself to catch any lack.
+6. Dark/Light theme implemented out the box.
+7. Responsivity is supported out the box.
+8. Has Table component and implemented it.
 
 ![Screenshot 2025-01-22 at 8 56 27 AM](https://github.com/user-attachments/assets/cf28d51a-fcd8-4500-a70e-5c5feeb3d11b)
-
-  
 
 -
