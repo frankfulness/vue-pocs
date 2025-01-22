@@ -32,6 +32,8 @@ Components to use:
 - Vite Plugin makes it easy to add, but you lose a lot & all SSR capabilities,
 - Vue CLI plugin is in maintenance mode, WARNED to use Quasar CLI
 
+![Screenshot 2025-01-22 at 11 11 20 AM](https://github.com/user-attachments/assets/0f3bf218-c384-4c6f-91f2-b658a1955548)
+
 ### CLI vs Plugin, Pros & Cons
 
 <https://quasar.dev/start/quasar-cli>
@@ -82,6 +84,27 @@ Video example of Accessibility stress test:
 7. Responsivity implementation exists baked in, didn't input time for layout.
 8. **POTENTIAL BLOCKER Radix** doesn't have a Data Table component out the box because it acknowledges that there are better table solutions out there, like AG Grid or the underlying TanStack Table v8 (used under the hood of AG Grid). Thus, I did implement a fairly simply tailwind styled TanStack Table in vue showing only a couple of the customizeable tables we can make for free <https://tanstack.com/table/latest/docs/framework/vue/examples/row-selection>
 
+# 🪴 IV. Nuxt with Nuxt UI + TailwindCSS
+![Screenshot 2025-01-22 at 8 56 27 AM](https://github.com/user-attachments/assets/cf28d51a-fcd8-4500-a70e-5c5feeb3d11b)
+
+1. Quick to generate a Nuxt application. Configuration documentation is straight forward. <https://nuxt.com/docs/getting-started/configuration>
+2. TypeScript opt out or in no problem, for form validation Yup > Zod if no TS.
+3. Component Library: It appears Nuxt UI has a decent free version and appears to be the go to for the component library choice for Nuxt. However, there is a Pro/Premium component version of this. <https://ui.nuxt.com/pro/pricing> fortunately it's a one time cost for life for 5 developers, there also appears to be a Figma Kit Pro for the 1500+ component & variants which has Tailwind CSS assets and icons included.
+4. TODO: Didn't implement Vitest yet
+5. 508 Axe DevTools initially had more flagged issues, but this is simply because you have to manually add aria labels properly, it's not a problem, just needs to be done correctly. Potentially section in MR's and e2e test for 508 itself to catch any lack.
+6. Dark/Light theme implemented out the box.
+7. Responsivity is supported out the box.
+8. Has Table component and implemented it.
+9. Nuxt with Tailwind Quick & Easy Setup <https://nuxt.com/modules/tailwindcss>
+
+
+# 📏 508 Compliance - Axe DevTools
+
+Initial look:
+PrimeVue To be added
+![axe vue comp](https://github.com/user-attachments/assets/3626288b-0740-4350-82d5-88117cfb8c1a)
+
+
 Running tests, tailwindcss, application, and poc breakdown in neovim
 ![Screenshot 2025-01-21 at 4 52 16 PM](https://github.com/user-attachments/assets/21438ff8-19a4-44ba-a5cf-959c3d5c5446)
 
@@ -98,20 +121,3 @@ Running tests, tailwindcss, application, and poc breakdown in neovim
 - More examples <https://www.vuetoolbox.com/categories/table>
 - Tanstack Table for vue <https://github.com/drehimself/tanstack-table-vue-example/tree/main> & <https://www.youtube.com/watch?v=qaXYtT_WJBw>
 - Codesandbox samples for Vue <https://codesandbox.io/search?refinementList%5Btemplate%5D=&refinementList%5Bnpm_dependencies.dependency%5D%5B0%5D=%40tanstack%2Fvue-table&page=1&configure%5BhitsPerPage%5D=12>
-
-# 🪴 IV. Nuxt with Nuxt UI + TailwindCSS
-
-1. Quick to generate a Nuxt application. Configuration documentation is straight forward. <https://nuxt.com/docs/getting-started/configuration>
-2. TypeScript opt out or in no problem, for form validation Yup > Zod if no TS.
-3. Component Library: It appears Nuxt UI has a decent free version and appears to be the go to for the component library choice for Nuxt. However, there is a Pro/Premium component version of this. <https://ui.nuxt.com/pro/pricing> fortunately it's a one time cost for life for 5 developers, there also appears to be a Figma Kit Pro for the 1500+ component & variants which has Tailwind CSS assets and icons included.
-4. TODO: Didn't implement Vitest yet
-5. 508 Axe DevTools initially had more flagged issues, but this is simply because you have to manually add aria labels properly, it's not a problem, just needs to be done correctly. Potentially section in MR's and e2e test for 508 itself to catch any lack.
-6. Dark/Light theme implemented out the box.
-7. Responsivity is supported out the box.
-8. Has Table component and implemented it.
-9. Nuxt with Tailwind Quick & Easy Setup <https://nuxt.com/modules/tailwindcss>
-![Screenshot 2025-01-22 at 8 56 27 AM](https://github.com/user-attachments/assets/cf28d51a-fcd8-4500-a70e-5c5feeb3d11b)
-
-# 📏 508 Compliance - Axe DevTools
-
-Initial look:-
