@@ -1281,6 +1281,11 @@ video {
   color: rgb(48 164 108 / var(--tw-text-opacity, 1));
 }
 
+.text-indigo-600{
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity, 1));
+}
+
 .text-mauve11{
   --tw-text-opacity: 1;
   color: rgb(101 99 109 / var(--tw-text-opacity, 1));
@@ -1289,11 +1294,6 @@ video {
 .text-mauve12{
   --tw-text-opacity: 1;
   color: rgb(33 31 38 / var(--tw-text-opacity, 1));
-}
-
-.text-indigo-600{
-  --tw-text-opacity: 1;
-  color: rgb(79 70 229 / var(--tw-text-opacity, 1));
 }
 
 .shadow-\[0_0_0_1px\]{
