@@ -42,6 +42,15 @@ Essentially, CLI means project regenerate/rewrite. Vite Plugin means lower quali
 The documentation completely lacked in explaining plugin installation. For example:
 For installing Vue devtools you have to create a boot/devtools.js file, and update the quasar.config.js file in 4 locations (boot, vitePlugins, framework, & build) after installing the dependency. And though we input everything that we should, we still could not get them in. No documentation provided from Quasar outside Electron. This means, due to inability to install browser extensions, we get NO Vue devtools with this CLI setup.
 
+1. Once fully rigged up, copy paste code is there, but the script code they provide for the component api doesn't work / errors with eslint etc (Dialog Prompt example), the documentation links to codepen html/js, but it's not just "Vue" ready though in the "Vue components" section, took a minute to figure out how to properly do it with different imports/script.
+2. Style overriding quasar's pure Material UI influence is challenging. Quasar is probably one of the worst frameworks to get working with Tailwind.
+3. No TypeScript config, seems difficult to move to TypeScript in the future.
+4. The Vitest support for Quasar was not found in documentation, might have to utilize a dependency in order to set it up, may not be too complex, but time investment not worthwhile currently.  <https://testing.quasar.dev/packages/unit-vitest/>
+5. Axe dev tools reveals fairly standard need to add custom accessibility attributes.
+6. Theming and styling in general is standard lock in in. <https://quasar.dev/style/theme-builder>
+7. Responsivity is nothing special, just Grid / Layout like every other component library.
+8. Table implementation and documentation and support for customization is lacking, potentially concerning.
+
 Quasar Vite-Plugin flavor was easier to set up, but you lose essentially everything Quasar really offers.
 
 # 🏎️ II. PrimeVue + Tailwind
@@ -95,7 +104,7 @@ Running tests, tailwindcss, application, and poc breakdown in neovim
 6. Dark/Light theme implemented out the box.
 7. Responsivity is supported out the box.
 8. Has Table component and implemented it.
-
+9. Nuxt with Tailwind Quick & Easy Setup <https://nuxt.com/modules/tailwindcss>
 ![Screenshot 2025-01-22 at 8 56 27 AM](https://github.com/user-attachments/assets/cf28d51a-fcd8-4500-a70e-5c5feeb3d11b)
 
 -
