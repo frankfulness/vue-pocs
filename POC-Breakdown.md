@@ -51,6 +51,9 @@ Immediately noticeable how much better/clearer the documentation is than Quasar.
 Easy to setup, install TailwindCSS and quickly configure the Vue app.
 
 # 🏁 III. Radix + Tailwind
+Video example of Accessibility stress test:
+https://github.com/user-attachments/assets/f6cdd50f-96a2-4c93-9dc5-5fb5d52e3f19
+![Screenshot 2025-01-21 at 4 37 13 PM](https://github.com/user-attachments/assets/3cdae166-5f87-4c7f-a2c9-03386227f5cc)
 
 1. Installation very smooth, easy to jump right into adding components. Component features in documentation specify it's compliance to accessibility.
 
@@ -63,3 +66,19 @@ Easy to setup, install TailwindCSS and quickly configure the Vue app.
 6. TODO: Responsivity implement
 7. TODO: Dark/Light theme
 8. Radix doesn't have a Data Table component out the box because it acknowledges that there are better table solutions out there, like AG Grid or the underlying TanStack Table v8 (used under the hood of AG Grid). Thus, I did implement a fairly simply tailwind styled TanStack Table in vue showing only a couple of the customizeable tables we can make for free <https://tanstack.com/table/latest/docs/framework/vue/examples/row-selection>
+
+
+
+**Alternative considerations for tables is an entirely larger discussion outside of component libraries:**
+- Kendo UI (Cost) https://www.telerik.com/kendo-vue-ui/components/grid/
+- AG Grid (Cost) https://www.ag-grid.com/javascript-data-grid/licensing/
+- RevoGrid https://rv-grid.com/demo/
+- Handsontable (Excel replacement)  https://handsontable.com/docs/javascript-data-grid/vue3-hot-reference/
+- Bryntum Grid https://bryntum.com/products/grid/docs/api/widgets/Grid/view/Grid
+- Vue3-easy-data-table https://hc200ok.github.io/vue3-easy-data-table-doc/getting-started.html
+- Vue 3 table lite https://vue3-lite-table.vercel.app/advance-examples.html
+- Datatables https://datatables.net/examples/basic_init/
+- More examples https://www.vuetoolbox.com/categories/table
+- Tanstack Table for vue https://github.com/drehimself/tanstack-table-vue-example/tree/main & https://www.youtube.com/watch?v=qaXYtT_WJBw
+- Codesandbox samples for Vue https://codesandbox.io/search?refinementList%5Btemplate%5D=&refinementList%5Bnpm_dependencies.dependency%5D%5B0%5D=%40tanstack%2Fvue-table&page=1&configure%5BhitsPerPage%5D=12
+
