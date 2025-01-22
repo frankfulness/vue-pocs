@@ -92,4 +92,9 @@ Running tests, tailwindcss, application, and poc breakdown in neovim
 - Can do without TypeScript easily, and for form validation Yup > Zod if no TS.
 - Has Table component and implemented it.
 
+
+![Screenshot 2025-01-22 at 8 56 27 AM](https://github.com/user-attachments/assets/cf28d51a-fcd8-4500-a70e-5c5feeb3d11b)
+
+  
+
 -
