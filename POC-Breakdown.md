@@ -100,9 +100,7 @@ Video example of Accessibility stress test:
 # 📏 508 Compliance - Axe DevTools
 
 Initial look:
-PrimeVue To be added
-![axe vue comp](https://github.com/user-attachments/assets/3626288b-0740-4350-82d5-88117cfb8c1a)
-
+![image](https://github.com/user-attachments/assets/0d462d63-982a-4f15-9897-dd335d7fabf8)
 
 Running tests, tailwindcss, application, and poc breakdown in neovim
 ![Screenshot 2025-01-21 at 4 52 16 PM](https://github.com/user-attachments/assets/21438ff8-19a4-44ba-a5cf-959c3d5c5446)
