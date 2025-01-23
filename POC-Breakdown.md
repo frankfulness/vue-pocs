@@ -56,12 +56,14 @@ For installing Vue devtools you have to create a boot/devtools.js file, and upda
 Quasar Vite-Plugin flavor was easier to set up, but you lose essentially everything Quasar really offers.
 
 # 🏎️ II. PrimeVue + Tailwind
+<img width="1713" alt="image" src="https://github.com/user-attachments/assets/2817beb2-7a24-4ef0-a468-d883a96bd0f8" />
 
 1. Immediately noticeable how much better/clearer the documentation is than Quasar. But it is still lacking in some areas and is confusing on which to follow. There is a primevue.org documentation then tailwind.primevue.org documentation and they are different.
 2. Easy to setup, install TailwindCSS and quickly configure the Vue app.
 3. While adding components we ended up needing to keep adding different plug-ins to make components work. (Example: I needed to add Zod and PrimeVue Forms in order for a switch toggle to work. 
 4. Treeshaking and auto-import is very clunky and not self explanatory. You need to install a plug-in for it and it sometimes works. (I still needed to manually import some components. <https://primevue.org/autoimport/>
 5. Even in unstyled I was fighting styling which should not be a thing. Sometimes the components used their own styling and wouldn't take tailwind styling (for example the table did not like trying to change background colors). Inconsistent.
+6. Limited table options.
 
 # 🏁 III. Radix + Tailwind
 
