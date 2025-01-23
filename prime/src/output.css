@@ -12897,7 +12897,7 @@ input.p-select-label {
 }
 
 .p-card {
-  display: flex;
+  display: flex-1;
   flex-direction: column;
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;

@@ -17,13 +17,15 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@primevue/forms": "^4.2.5",
     "@primevue/themes": "^4.2.5",
     "pinia": "^2.3.0",
     "primeicons": "^x.x.x",
     "primevue": "^4.2.5",
     "tailwindcss-primeui": "^0.4.0",
     "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.0",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",

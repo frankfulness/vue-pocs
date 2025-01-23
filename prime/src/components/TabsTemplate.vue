@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="flex-1 card">
       <Tabs value="0">
           <TabList>
               <Tab value="0" as="div" class="flex items-center gap-2">
